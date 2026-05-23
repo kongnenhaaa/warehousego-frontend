@@ -50,7 +50,7 @@ export default function ExportOrdersPage() {
           { label: 'Đã xác nhận', value: orders.filter(o => o.status !== 'draft' && o.status !== 'cancelled').length, color: '#60a5fa' },
           { label: 'Tổng doanh thu', value: formatCurrency(orders.reduce((sum, o) => sum + o.total_amount, 0)), color: '#fbbf24' },
         ].map(s => (
-          <div key={s.label} className="glass rounded-2xl p-4 text-center">
+          <div key={s.label} className="glass glass-hover rounded-2xl p-4 text-center">
             <div className="text-xl font-bold" style={{ color: s.color }}>{s.value}</div>
             <div className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>{s.label}</div>
           </div>
@@ -58,7 +58,7 @@ export default function ExportOrdersPage() {
       </div>
 
       {/* Filters */}
-      <div className="glass rounded-2xl p-4 mb-6 flex flex-wrap gap-3">
+      <div className="glass glass-hover rounded-2xl p-4 mb-6 flex flex-wrap gap-3">
         <div className="search-bar flex-1 min-w-48">
           <Search size={15} className="search-icon" />
           <input className="wh-input pl-9" placeholder="Tìm mã đơn, tên khách..." value={search} onChange={e => setSearch(e.target.value)} />
@@ -73,7 +73,7 @@ export default function ExportOrdersPage() {
       </div>
 
       {/* Table */}
-      <div className="glass rounded-2xl overflow-hidden">
+      <div className="glass glass-hover rounded-2xl overflow-hidden">
         <div className="overflow-x-auto">
           <table className="wh-table">
             <thead>

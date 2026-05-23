@@ -128,7 +128,7 @@ export default function DashboardPage() {
       {/* Charts row */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
         {/* Area chart - takes 2/3 width */}
-        <div className="glass rounded-2xl p-6 lg:col-span-2">
+        <div className="glass glass-hover rounded-2xl p-6 lg:col-span-2">
           <div className="flex items-center justify-between mb-6">
             <div>
               <h2 className="font-semibold text-white">Biểu đồ Nhập / Xuất trong tuần</h2>
@@ -163,7 +163,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Low stock panel - takes 1/3 */}
-        <div className="glass rounded-2xl p-6">
+        <div className="glass glass-hover rounded-2xl p-6">
           <div className="flex items-center gap-2 mb-5">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'rgba(244,63,94,0.15)' }}>
               <AlertTriangle size={15} style={{ color: '#f87171' }} />
@@ -199,7 +199,7 @@ export default function DashboardPage() {
       {/* Bar chart + Recent orders */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
         {/* Bar chart */}
-        <div className="glass rounded-2xl p-6">
+        <div className="glass glass-hover rounded-2xl p-6">
           <h2 className="font-semibold text-white mb-1">Doanh thu theo ngày</h2>
           <p className="text-xs mb-5" style={{ color: 'var(--text-muted)' }}>Đơn vị: triệu VND</p>
           <ResponsiveContainer width="100%" height={180}>
@@ -214,7 +214,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Recent transactions */}
-        <div className="glass rounded-2xl p-6">
+        <div className="glass glass-hover rounded-2xl p-6">
           <div className="flex items-center justify-between mb-5">
             <h2 className="font-semibold text-white">Giao dịch gần đây</h2>
             <a href="/reports" className="text-xs" style={{ color: '#60a5fa' }}>Xem tất cả →</a>
@@ -246,7 +246,7 @@ export default function DashboardPage() {
       </div>
 
       {/* Recent orders table */}
-      <div className="glass rounded-2xl overflow-hidden">
+      <div className="glass glass-hover rounded-2xl overflow-hidden">
         <div className="flex items-center justify-between p-6 pb-4">
           <h2 className="font-semibold text-white">Đơn hàng gần đây</h2>
           <div className="flex gap-2">

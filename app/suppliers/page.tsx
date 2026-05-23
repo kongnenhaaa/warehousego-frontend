@@ -63,7 +63,7 @@ export default function SuppliersPage() {
       </div>
 
       {/* Search */}
-      <div className="glass rounded-2xl p-4 mb-6">
+      <div className="glass glass-hover rounded-2xl p-4 mb-6">
         <div className="search-bar">
           <Search size={15} className="search-icon" />
           <input className="wh-input pl-9" placeholder="Tìm tên, email nhà cung cấp..." value={search} onChange={e => setSearch(e.target.value)} />

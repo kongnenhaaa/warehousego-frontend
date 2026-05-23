@@ -55,7 +55,7 @@ export default function ImportOrdersPage() {
           { label: 'Đã xác nhận', value: orders.filter(o => o.status === 'confirmed' || o.status === 'completed').length, color: '#34d399' },
           { label: 'Đang nháp', value: orders.filter(o => o.status === 'draft').length, color: '#fbbf24' },
         ].map(s => (
-          <div key={s.label} className="glass rounded-2xl p-4 text-center">
+          <div key={s.label} className="glass glass-hover rounded-2xl p-4 text-center">
             <div className="text-2xl font-bold" style={{ color: s.color }}>{s.value}</div>
             <div className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>{s.label}</div>
           </div>
@@ -63,7 +63,7 @@ export default function ImportOrdersPage() {
       </div>
 
       {/* Filters */}
-      <div className="glass rounded-2xl p-4 mb-6 flex flex-wrap gap-3">
+      <div className="glass glass-hover rounded-2xl p-4 mb-6 flex flex-wrap gap-3">
         <div className="search-bar flex-1 min-w-48">
           <Search size={15} className="search-icon" />
           <input className="wh-input pl-9" placeholder="Tìm mã đơn, nhà cung cấp..." value={search} onChange={e => setSearch(e.target.value)} />
@@ -78,7 +78,7 @@ export default function ImportOrdersPage() {
       </div>
 
       {/* Table */}
-      <div className="glass rounded-2xl overflow-hidden">
+      <div className="glass glass-hover rounded-2xl overflow-hidden">
         <div className="overflow-x-auto">
           <table className="wh-table">
             <thead>
