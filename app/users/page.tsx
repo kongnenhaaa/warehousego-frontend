@@ -60,7 +60,7 @@ export default function UsersPage() {
 
       {/* Stats */}
       <div className="grid grid-cols-2 gap-4 mb-6">
-        <div className="glass rounded-2xl p-5 flex items-center gap-4">
+        <div className="glass glass-hover rounded-2xl p-5 flex items-center gap-4">
           <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'rgba(59,130,246,0.15)' }}>
             <Shield size={20} style={{ color: '#60a5fa' }} />
           </div>
@@ -69,7 +69,7 @@ export default function UsersPage() {
             <div className="text-sm" style={{ color: 'var(--text-muted)' }}>Admin</div>
           </div>
         </div>
-        <div className="glass rounded-2xl p-5 flex items-center gap-4">
+        <div className="glass glass-hover rounded-2xl p-5 flex items-center gap-4">
           <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'rgba(16,185,129,0.15)' }}>
             <UserIcon size={20} style={{ color: '#34d399' }} />
           </div>
@@ -81,7 +81,7 @@ export default function UsersPage() {
       </div>
 
       {/* Table */}
-      <div className="glass rounded-2xl overflow-hidden">
+      <div className="glass glass-hover rounded-2xl overflow-hidden">
         <div className="overflow-x-auto">
           <table className="wh-table">
             <thead>

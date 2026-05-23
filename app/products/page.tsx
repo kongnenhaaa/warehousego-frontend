@@ -55,7 +55,7 @@ export default function ProductsPage() {
       </div>
 
       {/* Filters */}
-      <div className="glass rounded-2xl p-4 mb-6 flex flex-wrap gap-3">
+      <div className="glass glass-hover rounded-2xl p-4 mb-6 flex flex-wrap gap-3">
         <div className="search-bar flex-1 min-w-48">
           <Search size={15} className="search-icon" />
           <input
@@ -85,7 +85,7 @@ export default function ProductsPage() {
       </div>
 
       {/* Table */}
-      <div className="glass rounded-2xl overflow-hidden">
+      <div className="glass glass-hover rounded-2xl overflow-hidden">
         <div className="overflow-x-auto">
           <table className="wh-table">
             <thead>

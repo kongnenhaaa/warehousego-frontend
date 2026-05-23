@@ -20,27 +20,20 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   if (!isAuthenticated) return null
 
   return (
-    <div style={{ display: 'flex', height: '100vh', overflow: 'hidden', background: 'var(--bg-primary)' }}>
+    <div className="app-shell">
       {/* Mobile overlay */}
       {sidebarOpen && (
-        <div
-          onClick={() => setSidebarOpen(false)}
-          style={{
-            position: 'fixed', inset: 0, zIndex: 40,
-            background: 'rgba(0,0,0,0.55)',
-            backdropFilter: 'blur(2px)',
-          }}
-        />
+        <div className="app-overlay" onClick={() => setSidebarOpen(false)} />
       )}
 
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       {/* Main area */}
-      <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minWidth: 0, overflow: 'hidden' }}>
+      <div className="app-main">
         <Topbar onMenuClick={() => setSidebarOpen(prev => !prev)} />
-        <main style={{ flex: 1, overflowY: 'auto', padding: '24px' }}>
-          <div className="animate-fade-in">
+        <main className="app-content">
+          <div className="page-shell animate-fade-in">
             {children}
           </div>
         </main>

@@ -86,7 +86,7 @@ export default function ReportsPage() {
             ].map(kpi => {
               const Icon = kpi.icon
               return (
-                <div key={kpi.label} className="glass rounded-2xl p-5">
+                <div key={kpi.label} className="glass glass-hover rounded-2xl p-5">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: `${kpi.color}20` }}>
                       <Icon size={16} style={{ color: kpi.color }} />
@@ -101,7 +101,7 @@ export default function ReportsPage() {
 
           {/* Charts row */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            <div className="lg:col-span-2 glass rounded-2xl p-6">
+            <div className="lg:col-span-2 glass glass-hover rounded-2xl p-6">
               <h3 className="font-semibold text-white mb-5">Biểu đồ Nhập / Xuất</h3>
               <ResponsiveContainer width="100%" height={240}>
                 <AreaChart data={MOCK_CHART_DATA}>
@@ -126,7 +126,7 @@ export default function ReportsPage() {
               </ResponsiveContainer>
             </div>
 
-            <div className="glass rounded-2xl p-6">
+            <div className="glass glass-hover rounded-2xl p-6">
               <h3 className="font-semibold text-white mb-5">Phân bổ tồn kho theo danh mục</h3>
               <ResponsiveContainer width="100%" height={200}>
                 <PieChart>
@@ -148,7 +148,7 @@ export default function ReportsPage() {
       {activeTab === 'Tồn kho' && (
         <div className="space-y-6">
           {/* Low stock alert */}
-          <div className="glass rounded-2xl p-5" style={{ borderTop: '2px solid #f43f5e' }}>
+          <div className="glass glass-hover rounded-2xl p-5" style={{ borderTop: '2px solid #f43f5e' }}>
             <div className="flex items-center gap-2 mb-4">
               <AlertTriangle size={16} style={{ color: '#f87171' }} />
               <h3 className="font-semibold text-white">Sản phẩm sắp hết hàng</h3>
@@ -178,7 +178,7 @@ export default function ReportsPage() {
           </div>
 
           {/* All inventory */}
-          <div className="glass rounded-2xl overflow-hidden">
+          <div className="glass glass-hover rounded-2xl overflow-hidden">
             <div className="p-5 border-b" style={{ borderColor: 'var(--border)' }}>
               <h3 className="font-semibold text-white">Tồn kho toàn bộ sản phẩm</h3>
             </div>
@@ -227,7 +227,7 @@ export default function ReportsPage() {
 
       {/* Tab: Giao dịch */}
       {activeTab === 'Giao dịch' && (
-        <div className="glass rounded-2xl overflow-hidden">
+        <div className="glass glass-hover rounded-2xl overflow-hidden">
           <div className="flex items-center gap-2 p-5 border-b" style={{ borderColor: 'var(--border)' }}>
             <History size={16} style={{ color: '#60a5fa' }} />
             <h3 className="font-semibold text-white">Lịch sử giao dịch kho</h3>
@@ -272,7 +272,7 @@ export default function ReportsPage() {
       {/* Tab: Nhập/Xuất */}
       {activeTab === 'Nhập/Xuất' && (
         <div className="space-y-6">
-          <div className="glass rounded-2xl p-6">
+          <div className="glass glass-hover rounded-2xl p-6">
             <h3 className="font-semibold text-white mb-5">So sánh Nhập / Xuất theo ngày</h3>
             <ResponsiveContainer width="100%" height={300}>
               <BarChart data={MOCK_CHART_DATA}>
@@ -289,7 +289,7 @@ export default function ReportsPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {/* Import orders summary */}
-            <div className="glass rounded-2xl overflow-hidden">
+            <div className="glass glass-hover rounded-2xl overflow-hidden">
               <div className="p-4 border-b" style={{ borderColor: 'var(--border)' }}>
                 <h3 className="text-sm font-semibold text-white">Tóm tắt đơn nhập</h3>
               </div>
@@ -309,7 +309,7 @@ export default function ReportsPage() {
             </div>
 
             {/* Export orders summary */}
-            <div className="glass rounded-2xl overflow-hidden">
+            <div className="glass glass-hover rounded-2xl overflow-hidden">
               <div className="p-4 border-b" style={{ borderColor: 'var(--border)' }}>
                 <h3 className="text-sm font-semibold text-white">Tóm tắt đơn xuất</h3>
               </div>

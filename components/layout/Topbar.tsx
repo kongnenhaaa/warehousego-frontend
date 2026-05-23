@@ -35,11 +35,12 @@ export default function Topbar({ onMenuClick }: TopbarProps) {
           align-items: center;
           justify-content: space-between;
           padding: 0 20px;
-          border-bottom: 1px solid rgba(255,255,255,0.06);
-          background: rgba(9,14,28,0.9);
-          backdrop-filter: blur(12px);
+          border-bottom: 1px solid rgba(255,255,255,0.08);
+          background: rgba(9, 13, 26, 0.88);
+          backdrop-filter: blur(16px);
           flex-shrink: 0;
           gap: 12px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
         }
 
         .wh-topbar-left {
